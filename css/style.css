@@ -3,5 +3,6 @@
 }
 .clickImg{
     display: none;
+    overflow: hidden;
 }
 

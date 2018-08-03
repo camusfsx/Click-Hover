@@ -1,11 +1,10 @@
-$(`.clickMe`).on(`click`,()=>{
-    $(`.clickImg`).show()
-    setTimeout(()=>{
-        $(`.wrapper`).on(`click`,(e)=>{
-            e.stopPropagation()
-        })
-        $(document).one(`click`,()=>{
-            $(`.clickImg`).hide()
-        })
-    },0)
+$(`.wrapper`).on(`click`, (e) => {
+    e.stopPropagation()
 })
+$(`.clickMe`).on(`click`, () => {
+    $(`.clickImg`).toggle()
+    $(document).one(`click`, () => {
+        $(`.clickImg`).hide()
+    })
+})
+
