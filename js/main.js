@@ -1,0 +1,11 @@
+$(`.clickMe`).on(`click`,()=>{
+    $(`.clickImg`).show()
+    setTimeout(()=>{
+        $(`.wrapper`).on(`click`,(e)=>{
+            e.stopPropagation()
+        })
+        $(document).one(`click`,()=>{
+            $(`.clickImg`).hide()
+        })
+    },0)
+})
