@@ -1,7 +1,9 @@
 $(`.clickMe`).on(`click`, (e) => {
     e.stopPropagation()
 })
-$(`.clickImg`)
+$(`.clickImg`).on(`click`, (e) => {
+    e.stopPropagation()
+})
 $(`.clickMe`).on(`click`, () => {
     $(`.clickImg`).toggle()
     $(document).one(`click`, () => {
